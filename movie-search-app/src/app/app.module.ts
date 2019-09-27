@@ -8,6 +8,11 @@ import { SearchComponent } from './search/search.component';
 import { MoviePreviewComponent } from './search/movie-preview/movie-preview.component';
 import { FooterComponent } from './footer.component'
 
+import{FormsModule} from '@angular/forms'
+import { MovieService } from './movie-service';
+
+import {HttpClientModule} from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent
@@ -15,8 +20,10 @@ import { FooterComponent } from './footer.component'
   ],
   imports: [
     BrowserModule
+    ,FormsModule
+    ,HttpClientModule
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
